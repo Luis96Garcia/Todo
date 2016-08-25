@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Practica 1</title>
+</head>
+
+<body>
+
+    <table border="3" >
+        <tr>
+            <th>Nombre</th>
+            <th>Domicilio</th>
+            <th colspan="2">Telefono</th>
+        </tr>
+
+        <tr>
+            <td>Luis</td>
+            <td>Tonala</td>
+            <td>3331817472</td>
+            <td>3331817472</td>
+        </tr>
+
+        <tr>
+            <td>Luis</td>
+            <td>Tonala</td>
+            <td>3331817472</td>
+            <td>3331817472</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form name="form1">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>
+                    <input type="text" name="nom">
+                </th>
+            </tr>
+
+            <tr>
+                <th>Domicilio</th>
+                <th>
+                    <input type="text" name="dom">
+                </th>
+            </tr>
+
+            <tr>
+                <th>Telefono</th>
+                <th>
+                    <input type="text" name="tel">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <input type="Button" name="Boton" value="Enviar">
+                </th>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <script for="Boton" event="onclick" language="VBSCRIPT">
+        Nombre = form1.nom.value
+        Domicilio = form1.dom.value
+        Telefono = form1.tel.value
+
+        msgbox(Nombre)
+        document.write(Nombre)
+        document.write("<br>")
+        document.write(Domicilio)
+        document.write("<br>")
+        document.write(Telefono)
+        document.write("<br>")
+    </script>
+
+    <form name="ElMayor">
+        <table>
+            <tr>
+                <th colspan="2">
+                    El Numero Mayor
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    Numero 1
+                </th>
+                <td>
+                    <input type="text" name="num1">
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Numero 2
+                </th>
+                <td>
+                    <input type="text" name="num2">
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Numero 3
+                </th>
+                <td>
+                    <input type="text" name="num3">
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <input type="Button" name="buscar" value="Buscar">
+                </th>
+            </tr>
+
+        </table>
+    </form>
+    <br>
+    <script for="buscar" event="onclick" language="VBSCRIPT">
+        Numero1 = ElMayor.num1.value
+        Numero2 = ElMayor.num2.value
+        Numero3 = ElMayor.num3.value
+
+        If Numero1>Numero2 and Numero1>Numero3 then
+            msgbox("El valor mayor es " & Numero1 )
+        ElseIf Numero1>Numero2 and Numero3>Numero1 then
+            msgbox("El valor mayor es " & Numero3 )
+        ElseIf Numero2>Numero3 then
+            msgbox("El valor mayor es " & Numero2 )
+        ElseIf Numero3>Numero2 then
+            msgbox("El valor mayor es " & Numero3 )
+        End If
+
+    </script>
+
+</body>
+
+</html>
